@@ -1,0 +1,19 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.MultiCityWeatherForecastApplication" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.MultiCityWeatherForecastApplication" parent="Base.Theme.MultiCityWeatherForecastApplication" />
+
+    <style name="textInputEditText">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/very_dark_gray</item>
+        <item name="android:textColorHint">@color/very_dark_gray_50</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:paddingStart">16dp</item>
+    </style>
+
+
+</resources>

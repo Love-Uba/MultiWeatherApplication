@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fullWeatherFragment">
+
+
+    <fragment
+        android:id="@+id/fullWeatherFragment"
+        android:name="com.example.multicityweatherforecastapplication.ui.FullWeatherFragment"
+        android:label=""
+        tools:layout="@layout/fragment_full_weather" >
+        <action
+            android:id="@+id/action_fullWeatherFragment_to_weatherLocationSearchFragment"
+            app:destination="@id/weatherLocationSearchFragment" />
+        <action
+            android:id="@+id/action_fullWeatherFragment_to_favoritesLocationsFragment"
+            app:destination="@id/favoritesLocationsFragment" />
+        <argument
+            android:name="longlatdata"
+            app:argType="com.example.multicityweatherforecastapplication.data.models.LongLatData"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+    <fragment
+        android:id="@+id/weatherLocationSearchFragment"
+        android:name="com.example.multicityweatherforecastapplication.ui.WeatherLocationSearchFragment"
+        android:label="Weather" >
+        <action
+            android:id="@+id/action_weatherLocationSearchFragment_to_fullWeatherFragment"
+            app:destination="@id/fullWeatherFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoritesLocationsFragment"
+        android:name="com.example.multicityweatherforecastapplication.ui.FavoritesLocationsFragment"
+        android:label="Favourites"
+        tools:layout="@layout/fragment_favorites_locations" >
+        <action
+            android:id="@+id/action_favoritesLocationsFragment_to_fullWeatherFragment"
+            app:destination="@id/fullWeatherFragment" />
+    </fragment>
+</navigation>
